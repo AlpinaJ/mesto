@@ -1,4 +1,18 @@
 .header__logo{
     width:142px;
     height:33px;
+    fill: none;
+    overflow: hidden;
+}
+@media (max-width: 1279px) and (min-width: 321px){
+    .header__logo{
+        transform: scale(0.9);
+    }
+}
+
+
+@media (max-width: 320px) {
+    .header__logo{
+        transform: scale(0.75);
+    }
 }
