@@ -1,6 +1,6 @@
 .header{
     margin:0 0 32.5px;
-    padding: 45px 200px 60px;
+    padding: 45px 200px 0;
 }
 
 @media (max-width: 1279px) and (min-width: 321px){
@@ -11,6 +11,6 @@
 
 @media (max-width: 320px){
     .header{
-        padding: 28px 0 36px;
+        padding: 28px 0 0;
     }
 }
