@@ -56,12 +56,12 @@
             </defs>
         </svg>
 
-        <div class="profile_text">
-            <h1 class="profile_title">Жак-Ив Кусто</h1>
-            <h2 class="profile_subtitle">Исследователь океана</h2>
+        <div class="profile__text">
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <h2 class="profile__subtitle">Исследователь океана</h2>
         </div>
         <button id="edit-button" class="profile_edit-button">
-            <svg  width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" y="0.5" width="23" height="23" stroke="white"/>
                 <path d="M17 8.32827L9.60377 15.7666L8.28302 14.4194L15.6604 7L17 8.32827ZM7 17L8.96226 16.4118L7.58491 15.0835L7 17Z"
                       fill="white"/>
@@ -71,10 +71,26 @@
     <button id="add-button" class="profile_add-button">
         <svg viewBox="0 0 150 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="148" height="48" rx="1" stroke="white" stroke-width="2"/>
-            <path d="M86 23.7778H76.2222V14H73.7778V23.7778H64V26.2222H73.7778V36H76.2222V26.2222H86V23.7778Z" fill="white"/>
+            <path d="M86 23.7778H76.2222V14H73.7778V23.7778H64V26.2222H73.7778V36H76.2222V26.2222H86V23.7778Z"
+                  fill="white"/>
         </svg>
 
     </button>
 </section>
+
+<div class="popup">
+    <div class="popup__container">
+        <button class="popup__button-close"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form">
+            <input type="text" class="popup__input popup__input-name" value="Жак-Ив Кусто">
+            <input type="text" class="popup__input popup__input-description" value="Исследователь океана">
+            <button type="submit" class="popup__button-save"> Сохранить</button>
+        </form>
+
+    </div>
+</div>
+
+<script src="scripts/index.js"></script>
 </body>
 </html>
