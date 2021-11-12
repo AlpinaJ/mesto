@@ -23,9 +23,11 @@
 @import url('../blocks/card/__title/card__title.css');
 @import url('../blocks/card/__like/card__like.css');
 @import url('../blocks/card/__info/card__info.css');
+@import url('../blocks/footer/footer.css');
 .page{
     background-color: black;
     justify-self: center;
+    margin: 0 200px 0;
 }
 
 
