@@ -24,10 +24,40 @@
 @import url('../blocks/card/__like/card__like.css');
 @import url('../blocks/card/__info/card__info.css');
 @import url('../blocks/footer/footer.css');
+@import url('../blocks/profile/__description/profile__description.css');
 .page{
     background-color: black;
     justify-self: center;
     margin: 0 200px 0;
 }
 
+@media (max-width: 1279px){
+    .page{
+        margin: 0 150px 0;
+    }
+}
+
+@media (max-width: 950px){
+    .page{
+        margin: 0 100px 0;
+    }
+}
+
+@media (max-width: 800px){
+    .page{
+        margin: 0 50px 0;
+    }
+}
+
+@media (max-width: 700px){
+    .page{
+        margin: 0 25px 0;
+    }
+}
+
+@media (max-width: 630px){
+    .page{
+        margin: 0 19px 0;
+    }
+}
 

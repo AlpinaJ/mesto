@@ -3,6 +3,17 @@
     width: 24px;
     height: 24px;
     border: none;
+    margin: 0 0 0 30px;
+    position: absolute;
+    bottom: 10px;
+    right: -35px;
+    transform: scale(2);
+}
 
-    margin: 39px 0 0 18px;
+@media (max-width: 950px){
+    .profile_edit-button{
+        bottom: 5px;
+        right: -15px;
+        transform: scale(1.5);
+    }
 }
