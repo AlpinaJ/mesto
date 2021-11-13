@@ -14,3 +14,10 @@
 .popup__input:focus{
     box-shadow: 0 0 0 2px dodgerblue;
 }
+
+@media (max-width: 700px) {
+    .popup__input{
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

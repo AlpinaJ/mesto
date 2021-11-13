@@ -1,9 +1,17 @@
-.popup__button-close{
+.popup__button-close {
     width: 32px;
     height: 32px;
     background: url('../../../images/close.svg');
     border: none;
     position: absolute;
-    top:-32px;
+    top: -32px;
     right: -32px;
+}
+
+@media (max-width: 700px) {
+    .popup__button-close {
+        transform: scale(0.625);
+        top: -35px;
+        right: -8px;
+    }
 }

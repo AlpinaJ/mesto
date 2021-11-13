@@ -7,3 +7,10 @@
     padding: 10px;
     position: relative;
 }
+
+@media (max-width: 700px) {
+    .popup__container{
+        max-width: 282px;
+        min-height: 322px;
+    }
+}
