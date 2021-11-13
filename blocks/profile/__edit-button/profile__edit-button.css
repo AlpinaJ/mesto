@@ -10,6 +10,10 @@
     transform: scale(2);
 }
 
+.profile_edit-button:hover{
+    opacity: 0.6;
+}
+
 @media (max-width: 950px){
     .profile_edit-button{
         bottom: 5px;
