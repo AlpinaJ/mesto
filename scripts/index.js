@@ -1,6 +1,6 @@
 const popup = document.querySelector('.popup');
 const popupCloseButton = document.querySelector('.popup__button-close');
-const editButton = document.querySelector('.profile_edit-button');
+const editButton = document.querySelector('.profile__edit-button');
 const form = document.querySelector('.popup__form');
 const newName = form.querySelector('.popup__input-name');
 const newDescription = form.querySelector('.popup__input-description');
@@ -8,6 +8,7 @@ const name = document.querySelector('.profile__title');
 const description = document.querySelector('.profile__subtitle');
 const card_likes = document.querySelectorAll('.card__like');
 
+console.log(editButton);
 editButton.addEventListener('click', function () {
     popup.classList.add('popup_isOpen');
 });

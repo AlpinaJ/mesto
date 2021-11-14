@@ -8,6 +8,8 @@
 
 @media (max-width: 500px) {
     .header__line{
-        margin-top: 31px;
+        margin: 31px -19px 0;
+        width:318px;
+        align-items: center;
     }
 }

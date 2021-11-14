@@ -4,6 +4,7 @@
     margin: 5px 0 0 5px;
     overflow: hidden;
     background-image: url("../../../images/like.svg");
+    cursor: pointer;
 }
 
 .card__like:hover{

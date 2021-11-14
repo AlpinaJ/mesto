@@ -1,6 +1,11 @@
 .profile__text{
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: space-between;*/
-    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 700px) {
+    .profile__text{
+        display: flex;
+        flex-direction: row;
+    }
 }
