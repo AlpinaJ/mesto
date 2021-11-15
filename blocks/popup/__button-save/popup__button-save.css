@@ -12,7 +12,7 @@
     cursor: pointer;
 }
 
-.popup__button-save:focus {
+.popup__button-save:hover {
     opacity: 0.8;
 }
 
