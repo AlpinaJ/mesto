@@ -1,10 +1,10 @@
-.header{
-    margin:0;
+.header {
+    margin: 0;
     padding: 45px 0 36px;
 }
 
-@media (max-width: 500px){
-    .header{
+@media (max-width: 500px) {
+    .header {
         padding: 28px 0 36px;
     }
 }

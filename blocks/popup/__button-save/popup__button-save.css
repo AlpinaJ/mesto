@@ -1,8 +1,8 @@
-.popup__button-save{
+.popup__button-save {
     margin: 18px 0 0;
     background-color: black;
     height: 50px;
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -12,11 +12,12 @@
     cursor: pointer;
 }
 
-.popup__button-save:focus{
+.popup__button-save:focus {
     opacity: 0.8;
 }
+
 @media (max-width: 700px) {
-    .popup__button-save{
+    .popup__button-save {
         height: 46px;
         font-size: 14px;
         line-height: 17px;

@@ -1,5 +1,3 @@
 .card__like-active{
-    /*background-color: black;*/
-    fill: red !important;
     background-image: url("../../../images/like-active.svg");
 }

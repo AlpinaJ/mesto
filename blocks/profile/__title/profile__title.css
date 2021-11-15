@@ -1,4 +1,4 @@
-.profile__title{
+.profile__title {
     font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -9,8 +9,8 @@
     z-index: 1;
 }
 
-@media (max-width: 950px){
-    .profile__title{
+@media (max-width: 950px) {
+    .profile__title {
         font-size: 27px;
         line-height: 32px;
     }

@@ -1,10 +1,10 @@
-.profile__text{
+.profile__text {
     display: flex;
     flex-direction: row;
 }
 
 @media (max-width: 700px) {
-    .profile__text{
+    .profile__text {
         display: flex;
         flex-direction: row;
     }

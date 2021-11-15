@@ -1,11 +1,11 @@
-.profile_avatar{
+.profile_avatar {
     width: 120px;
     height: 120px;
     margin: 0 18px 0 0;
 }
 
 @media (max-width: 700px) {
-    .profile_avatar{
+    .profile_avatar {
         margin: 0 auto 0;
     }
 }

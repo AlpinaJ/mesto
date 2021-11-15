@@ -1,4 +1,4 @@
-.header__line{
+.header__line {
     width: 100%;
     justify-self: center;
     margin-top: 41px;
@@ -7,9 +7,9 @@
 }
 
 @media (max-width: 500px) {
-    .header__line{
+    .header__line {
         margin: 31px -19px 0;
-        width:318px;
+        width: 318px;
         align-items: center;
     }
 }
