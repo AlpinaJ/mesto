@@ -1,4 +1,4 @@
-.profile_info {
+.profile__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
