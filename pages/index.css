@@ -39,19 +39,20 @@
 
 @media (max-width: 1279px) {
     .page {
-        margin: 0 150px 0;
+        /*margin: 0 150px 0;*/
+        max-width: 750px;
     }
 }
 
 @media (max-width: 950px) {
     .page {
-        margin: 0 100px 0;
+        max-width: 700px;
     }
 }
 
 @media (max-width: 800px) {
     .page {
-        margin: 0 50px 0;
+        max-width: 660px;
     }
 }
 

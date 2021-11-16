@@ -9,7 +9,7 @@
     z-index: 1;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 700px) {
     .profile__title {
         font-size: 27px;
         line-height: 32px;
