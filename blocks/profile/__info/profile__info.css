@@ -5,7 +5,7 @@
 }
 
 @media (max-width: 700px) {
-    .profile_info {
+    .profile__info {
         flex-direction: column;
     }
 }

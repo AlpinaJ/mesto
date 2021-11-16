@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 700px) {
-    .profile_avatar {
+    .profile__avatar {
         margin: 0 auto 0;
     }
 }
