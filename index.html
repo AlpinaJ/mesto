@@ -7,92 +7,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="page">
-
 <header class="header">
-    <a href="#">
+    <a href="#" class="header__link">
         <img src="images/logo.svg" class="header__logo" alt="Место">
     </a>
-    <div class="header__line"></div>
 </header>
-
-<section class="profile">
-    <div class="profile__info">
-        <img class="profile__avatar" src="images/avatar.png" alt="Фото пользователя">
-        <div class="profile__description">
-            <div class="profile__text">
-                <h1 class="profile__title">Жак-Ив Кусто</h1>
-                <button id="edit-button" class="profile__edit-button">
-                </button>
+<main>
+    <section class="profile">
+        <div class="profile__info">
+            <img class="profile__avatar" src="images/avatar.png" alt="Фото пользователя">
+            <div class="profile__description">
+                <div class="profile__text">
+                    <h1 class="profile__title">Жак-Ив Кусто</h1>
+                    <button id="edit-button" class="profile__edit-button" type="button">
+                    </button>
+                </div>
+                <h2 class="profile__subtitle">Исследователь океана</h2>
             </div>
-            <h2 class="profile__subtitle">Исследователь океана</h2>
+        </div>
+        <button id="add-button" class="profile__add-button" type="button">
+        </button>
+    </section>
+    <section class="main">
+        <article class="card">
+            <img src="./images/1.jpg" class="card__image" alt="Лаванда">
+            <div class="card__info">
+                <h3 class="card__title">Лаванда</h3>
+                <button class="card__like" type="button"></button>
+            </div>
+        </article>
+        <article class="card">
+            <img src="./images/2.jpg" class="card__image" alt="Розовые коалы">
+            <div class="card__info">
+                <h3 class="card__title">Розовые коалы</h3>
+                <button class="card__like" type="button"></button>
+            </div>
+        </article>
+        <article class="card">
+            <img src="./images/3.jpg" class="card__image" alt="Гортензия">
+            <div class="card__info">
+                <h3 class="card__title">Гортензия</h3>
+                <button class="card__like" type="button"></button>
+            </div>
+        </article>
+        <article class="card">
+            <img src="./images/4.jpg" class="card__image" alt="Цветущее вишневое дерево">
+            <div class="card__info">
+                <h3 class="card__title">Цветущее вишневое дерево</h3>
+                <button class="card__like" type="button"></button>
+            </div>
+        </article>
+        <article class="card">
+            <img src="./images/5.jpg" class="card__image" alt="Лотос">
+            <div class="card__info">
+                <h3 class="card__title">Лотос</h3>
+                <button class="card__like" type="button"></button>
+            </div>
+        </article>
+        <article class="card">
+            <img src="./images/6.jpg" class="card__image" alt="Красные тюльпаны">
+            <div class="card__info">
+                <h3 class="card__title">Красные тюльпаны</h3>
+                <button class="card__like" type="button"></button>
+            </div>
+        </article>
+    </section>
+    <div class="popup">
+        <div class="popup__container">
+            <button class="popup__button-close" type="button"></button>
+            <h3 class="popup__title">Редактировать профиль</h3>
+            <form class="popup__form" name="edit">
+                <input type="text" class="popup__input popup__input_type_name" name="name" value="Жак-Ив Кусто">
+                <input type="text" class="popup__input popup__input_type_description" name="description"
+                       value="Исследователь океана">
+                <button type="submit" class="popup__button-save"> Сохранить</button>
+            </form>
         </div>
     </div>
-    <button id="add-button" class="profile__add-button">
-    </button>
-</section>
-
-<div class="popup">
-    <div class="popup__container">
-        <button class="popup__button-close"></button>
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form">
-            <input type="text" class="popup__input popup__input-name" value="Жак-Ив Кусто">
-            <input type="text" class="popup__input popup__input-description" value="Исследователь океана">
-            <button type="submit" class="popup__button-save"> Сохранить</button>
-        </form>
-
-    </div>
-</div>
-
-<section class="main">
-    <div class="card">
-        <img src="./images/1.jpg" class="card__image" alt="Лаванда">
-        <div class="card__info">
-            <h3 class="card__title">Лаванда</h3>
-            <div class="card__like"></div>
-        </div>
-
-    </div>
-    <div class="card">
-        <img src="./images/2.jpg" class="card__image" alt="Розовые коалы">
-        <div class="card__info">
-            <h3 class="card__title">Розовые коалы</h3>
-            <div class="card__like"></div>
-        </div>
-    </div>
-    <div class="card">
-        <img src="./images/3.jpg" class="card__image" alt="Гортензия">
-        <div class="card__info">
-            <h3 class="card__title">Гортензия</h3>
-            <div class="card__like"></div>
-        </div>
-    </div>
-    <div class="card">
-        <img src="./images/4.jpg" class="card__image" alt="Цветущее вишневое дерево">
-        <div class="card__info">
-            <h3 class="card__title">Цветущее вишневое дерево</h3>
-            <div class="card__like"></div>
-        </div>
-    </div>
-    <div class="card">
-        <img src="./images/5.jpg" class="card__image" alt="Лотос">
-        <div class="card__info">
-            <h3 class="card__title">Лотос</h3>
-            <div class="card__like"></div>
-        </div>
-    </div>
-    <div class="card">
-        <img src="./images/6.jpg" class="card__image" alt="Красные тюльпаны">
-        <div class="card__info">
-            <h3 class="card__title">Красные тюльпаны</h3>
-            <div class="card__like"></div>
-        </div>
-    </div>
-</section>
-
+</main>
 <footer class="footer">
+    <p class="footer__text">© 2020 Mesto Russia</p>
 </footer>
-
 <script src="scripts/index.js"></script>
 </body>
 </html>
