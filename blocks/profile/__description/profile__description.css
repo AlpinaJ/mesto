@@ -2,3 +2,8 @@
     margin: 18px 0 0;
 }
 
+@media (max-width: 700px) {
+    .profile__description{
+        margin: 30px 0 0;
+    }
+}
