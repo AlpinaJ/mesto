@@ -5,3 +5,9 @@
     grid-row-gap: 20px;
     justify-content: center;
 }
+
+@media (max-width: 630px) {
+    .main{
+        margin: 0 19px 0;
+    }
+}
