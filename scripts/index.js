@@ -22,7 +22,7 @@ function submitForm(event) {
     event.preventDefault();
     name.textContent = newName.value;
     description.textContent = newDescription.value;
-    popup.classList.remove('popup_opened');
+    closePopup();
 }
 
 editButton.addEventListener('click', openPopup);
