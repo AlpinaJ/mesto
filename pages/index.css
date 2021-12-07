@@ -18,6 +18,7 @@
 @import url('../blocks/popup/__form/popup__form.css');
 @import url('../blocks/popup/__input/popup__input.css');
 @import url('../blocks/popup/__button-save/popup__button-save.css');
+@import url('../blocks/popup/__button-create/popup__button-create.css');
 @import url('../blocks/main/main.css');
 @import url('../blocks/card/card.css');
 @import url('../blocks/card/__image/card__image.css');

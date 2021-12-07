@@ -1,12 +1,25 @@
-const popup = document.querySelector('.popup');
-const popupCloseButton = document.querySelector('.popup__button-close');
+// Попапы
+const popupEdit = document.querySelector('.popup_type_edit');
+const popupAdd = document.querySelector('.popup_type_add');
+
+// Кнопки в профиле
+const popupCloseButtons = document.querySelectorAll('.popup__button-close');
 const editButton = document.querySelector('.profile__edit-button');
-const form = document.querySelector('.popup__form');
-const newName = form.querySelector('.popup__input_type_name');
-const newDescription = form.querySelector('.popup__input_type_description');
+const addButton = document.querySelector('.profile__add-button');
+
+// Переменные для работы с формой редактирования
+const editForm = document.querySelector('.popup__form_type_edit');
+const newName = editForm.querySelector('.popup__input_type_name');
+const newDescription = editForm.querySelector('.popup__input_type_description');
 const name = document.querySelector('.profile__title');
 const description = document.querySelector('.profile__subtitle');
-// const card_likes = document.querySelectorAll('.card__like');
+
+// Переменные для работы с формой для создания места
+const addForm = document.querySelector('.popup__form_type_add');
+const newPlace = addForm.querySelector('.popup__input_type_place');
+const newLink = addForm.querySelector('.popup__input_type_link');
+const createButton = addForm.querySelector('.popup__button-create');
+
 const cards = document.querySelector('.main');
 const cardTemplate = document.querySelector('template');
 const initialCards = [
@@ -36,55 +49,80 @@ const initialCards = [
     }
 ];
 
-function openPopup() {
+// Функции для открытия и закрытия попапов
+function openPopup(popup) {
     popup.classList.add('popup_opened');
-    name.textContent = newName.value;
-    description.textContent = newDescription.value;
 }
 
-function closePopup() {
+function closePopup(popup) {
     popup.classList.remove('popup_opened');
 }
 
+// Редактирование профиля
 function submitForm(event) {
     event.preventDefault();
     name.textContent = newName.value;
     description.textContent = newDescription.value;
-    closePopup();
+    closePopup(event.target.closest('.popup'));
 }
 
-editButton.addEventListener('click', openPopup);
+editButton.addEventListener('click', function () {
+    openPopup(popupEdit);
+    // Делаем присваивание полей
+    name.textContent = newName.value;
+    description.textContent = newDescription.value;
+});
 
-popupCloseButton.addEventListener('click', closePopup);
+// Закрытие попапов
+popupCloseButtons.forEach(button => button.addEventListener('click', function (event) {
+    // Добираемся до попапа, которому принадлежит кнопка
+    closePopup(event.target.closest('.popup'));
+}));
 
-form.addEventListener('submit', submitForm);
+editForm.addEventListener('submit', submitForm);
 
-function createCard (card){
+addButton.addEventListener('click', function () {
+    newPlace.value = '';
+    newLink.value = '';
+    openPopup(popupAdd);
+});
+
+function createCard(card) {
     const newCard = cardTemplate.content.cloneNode(true);
     const cardImage = newCard.querySelector('.card__image');
     const cardTitle = newCard.querySelector('.card__title');
 
-    //Записываем значения title,image, alt в карточку
+    // Записываем значения title,image, alt в карточку
     cardTitle.textContent = card.name;
     cardImage.alt = card.name;
     cardImage.src = card.link;
 
+    // Лайк у карточки
+    const like = newCard.querySelector('.card__like');
+    like.addEventListener('click', function () {
+        like.classList.toggle('card__like_active');
+    });
+
     return newCard;
 }
 
-function addCard(card){
+function addCard(card) {
     cards.prepend(card);
 }
 
 initialCards.forEach(card => addCard(createCard(card)));
 
-// for (let i = 0; i < card_likes.length; i = i + 1) {
-//     card_likes[i].addEventListener('click', function () {
-//         if (card_likes[i].classList.contains('card__like_active')) {
-//             card_likes[i].classList.remove('card__like_active');
-//         } else {
-//             card_likes[i].classList.add('card__like_active');
-//         }
-//     });
-// }
+function addPopupCard(event) {
+    event.preventDefault();
+    console.log(1);
+    const newCard = {
+        name: newPlace.value,
+        link: newLink.value,
+    };
 
+    addCard(createCard(newCard));
+    console.log(2);
+    closePopup(popupAdd);
+}
+
+createButton.addEventListener('click', addPopupCard);
