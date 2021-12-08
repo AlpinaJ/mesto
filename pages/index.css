@@ -25,11 +25,14 @@
 @import url('../blocks/card/__title/card__title.css');
 @import url('../blocks/card/__like/card__like.css');
 @import url('../blocks/card/__like/_active/card__like_active.css');
+@import url('../blocks/card/__thrash/card__thrash.css');
 @import url('../blocks/card/__info/card__info.css');
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/profile/__description/profile__description.css');
 @import url('../blocks/header/__link/header__link.css');
 @import url('../blocks/popup/_opened/popup_opened.css');
 @import url('../blocks/footer/__text/footer__text.css');
-
-
+@import url('../blocks/popup/_type/popup_type_show.css');
+@import url('../blocks/popup/__text/popup__text.css');
+@import url('../blocks/popup/__image/popup__image.css');
+@import url('../blocks/popup/__image-container/popup__image-container.css');
