@@ -29,84 +29,42 @@
         </button>
     </section>
     <section class="main">
-        <!--        <article class="card">-->
-        <!--            <img src="./images/1.jpg" class="card__image" alt="Лаванда">-->
-        <!--            <div class="card__info">-->
-        <!--                <h3 class="card__title">Лаванда</h3>-->
-        <!--                <button class="card__like" type="button"></button>-->
-        <!--            </div>-->
-        <!--        </article>-->
-        <!--        <article class="card">-->
-        <!--            <img src="./images/2.jpg" class="card__image" alt="Розовые коалы">-->
-        <!--            <div class="card__info">-->
-        <!--                <h3 class="card__title">Розовые коалы</h3>-->
-        <!--                <button class="card__like" type="button"></button>-->
-        <!--            </div>-->
-        <!--        </article>-->
-        <!--        <article class="card">-->
-        <!--            <img src="./images/3.jpg" class="card__image" alt="Гортензия">-->
-        <!--            <div class="card__info">-->
-        <!--                <h3 class="card__title">Гортензия</h3>-->
-        <!--                <button class="card__like" type="button"></button>-->
-        <!--            </div>-->
-        <!--        </article>-->
-        <!--        <article class="card">-->
-        <!--            <img src="./images/4.jpg" class="card__image" alt="Цветущее вишневое дерево">-->
-        <!--            <div class="card__info">-->
-        <!--                <h3 class="card__title">Цветущее вишневое дерево</h3>-->
-        <!--                <button class="card__like" type="button"></button>-->
-        <!--            </div>-->
-        <!--        </article>-->
-        <!--        <article class="card">-->
-        <!--            <img src="./images/5.jpg" class="card__image" alt="Лотос">-->
-        <!--            <div class="card__info">-->
-        <!--                <h3 class="card__title">Лотос</h3>-->
-        <!--                <button class="card__like" type="button"></button>-->
-        <!--            </div>-->
-        <!--        </article>-->
-        <!--        <article class="card">-->
-        <!--            <img src="./images/6.jpg" class="card__image" alt="Красные тюльпаны">-->
-        <!--            <div class="card__info">-->
-        <!--                <h3 class="card__title">Красные тюльпаны</h3>-->
-        <!--                <button class="card__like" type="button"></button>-->
-        <!--            </div>-->
-        <!--        </article>-->
     </section>
-    <div class="popup popup_type_edit">
-        <div class="popup__container">
-            <button class="popup__button-close" type="button"></button>
-            <h3 class="popup__title">Редактировать профиль</h3>
-            <form class="popup__form popup__form_type_edit" name="edit">
-                <input type="text" class="popup__input popup__input_type_name" name="name" value="Жак-Ив Кусто">
-                <input type="text" class="popup__input popup__input_type_description" name="description"
-                       value="Исследователь океана">
-                <button type="submit" class="popup__button-save"> Сохранить</button>
-            </form>
-        </div>
-    </div>
-    <div class="popup popup_type_add">
-        <div class="popup__container">
-            <button class="popup__button-close" type="button"></button>
-            <h3 class="popup__title">Новое место</h3>
-            <form class="popup__form popup__form_type_add" name="add">
-                <input type="text" class="popup__input popup__input_type_place" name="place" placeholder="Название">
-                <input type="text" class="popup__input popup__input_type_link" name="link"
-                       placeholder="Ссылка на картинку">
-                <button type="submit" class="popup__button-create"> Создать</button>
-            </form>
-        </div>
-    </div>
-    <div class="popup popup_type_show">
-        <div class="popup__image-container">
-            <button class="popup__button-close" type="button"></button>
-            <img src="#" alt="увеличенная картинка" class="popup__image">
-            <p class="popup__text">lalal</p>
-        </div>
-    </div>
 </main>
 <footer class="footer">
     <p class="footer__text">© 2020 Mesto Russia</p>
 </footer>
+<div class="popup popup_type_edit">
+    <div class="popup__container">
+        <button class="popup__button-close" type="button"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form popup__form_type_edit" name="edit">
+            <input type="text" class="popup__input popup__input_type_name" name="name" placeholder="Жак-Ив Кусто">
+            <input type="text" class="popup__input popup__input_type_description" placeholder="description"
+                   value="Исследователь океана">
+            <button type="submit" class="popup__button-save"> Сохранить</button>
+        </form>
+    </div>
+</div>
+<div class="popup popup_type_add">
+    <div class="popup__container">
+        <button class="popup__button-close" type="button"></button>
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form popup__form_type_add" name="add">
+            <input type="text" class="popup__input popup__input_type_place" name="place" placeholder="Название">
+            <input type="url" class="popup__input popup__input_type_link" name="link"
+                   placeholder="Ссылка на картинку">
+            <button type="submit" class="popup__button-create"> Создать</button>
+        </form>
+    </div>
+</div>
+<div class="popup popup_type_show">
+    <div class="popup__image-container">
+        <button class="popup__button-close" type="button"></button>
+        <img src="#" alt="увеличенная картинка" class="popup__image">
+        <p class="popup__text">lalal</p>
+    </div>
+</div>
 <template class="template">
     <article class="card">
         <button class="card__thrash" type="button"></button>
@@ -117,6 +75,7 @@
         </div>
     </article>
 </template>
+<script src="scripts/initial-cards.js"></script>
 <script src="scripts/index.js"></script>
 </body>
 </html>

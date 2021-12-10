@@ -4,3 +4,9 @@
     height: 282px;
     border-radius: 10px 10px 0 0;
 }
+
+.card__image:hover{
+    cursor:pointer;
+    opacity: 0.9;
+    transition: ease-out 0.5s;
+}
