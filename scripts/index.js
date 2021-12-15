@@ -26,14 +26,26 @@ const popupText = popupShowImage.querySelector('.popup__text');
 
 const cardsContainer = document.querySelector('.main');
 
+const popupOverlay = document.querySelectorAll('.popup__overlay');
+
+
+// Функция закрытия попапа нажатием клавишы Esc
+function closePopupByEscape(event){
+    if(event.key === "Escape"){
+        closePopup(document.querySelector(".popup_opened"));
+    }
+}
 
 // Функции для открытия и закрытия попапов
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    // Ставим слушатель на клавиши, чтобы потом закрывать попап если был нажат esc
+    document.addEventListener('keydown', closePopupByEscape);
 }
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closePopupByEscape);
 }
 
 // Редактирование профиля
@@ -120,3 +132,9 @@ buttonAdd.addEventListener('click', function () {
 initialCards.forEach(card => addCard(createCard(card)));
 
 formAddCard.addEventListener('submit', addPopupCard);
+
+popupOverlay.forEach((element) =>{
+    element.addEventListener('click', function(event){
+        closePopup(event.target.closest('.popup'));
+    })
+})
