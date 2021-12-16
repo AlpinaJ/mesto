@@ -19,14 +19,16 @@ const description = document.querySelector('.profile__subtitle');
 const formAddCard = document.querySelector('.popup__form_type_add');
 const newPlace = formAddCard.querySelector('.popup__input_type_place');
 const newLink = formAddCard.querySelector('.popup__input_type_link');
+const buttonCreate = formAddCard.querySelector('.popup__button-create');
 
 // Переменные для работы с увеличинной картинкой
 const popupImage = popupShowImage.querySelector('.popup__image');
 const popupText = popupShowImage.querySelector('.popup__text');
 
 const cardsContainer = document.querySelector('.main');
+const cardTemplate = document.querySelector('template');
 
-const popupOverlay = document.querySelectorAll('.popup__overlay');
+const popupOverlays = document.querySelectorAll('.popup__overlay');
 
 
 // Функция закрытия попапа нажатием клавишы Esc
@@ -62,7 +64,6 @@ function deleteCard(event) {
 }
 
 function createCard(card) {
-    const cardTemplate = document.querySelector('template');
     const newCard = cardTemplate.content.cloneNode(true);
     const cardImage = newCard.querySelector('.card__image');
     const cardTitle = newCard.querySelector('.card__title');
@@ -107,7 +108,13 @@ function addPopupCard(event) {
 
     addCard(createCard(newCard));
     closePopup(popupAddCard);
+    console.log("laa");
+
+    console.log(buttonCreate.disabled);
     formAddCard.reset();
+    buttonCreate.classList.add('popup__button_disabled');
+    buttonCreate.disabled = true;
+    console.log(buttonCreate.disabled);
 }
 
 buttonEdit.addEventListener('click', function () {
@@ -133,7 +140,7 @@ initialCards.forEach(card => addCard(createCard(card)));
 
 formAddCard.addEventListener('submit', addPopupCard);
 
-popupOverlay.forEach((element) =>{
+popupOverlays.forEach((element) =>{
     element.addEventListener('click', function(event){
         closePopup(event.target.closest('.popup'));
     })
