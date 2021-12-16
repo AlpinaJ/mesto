@@ -108,13 +108,9 @@ function addPopupCard(event) {
 
     addCard(createCard(newCard));
     closePopup(popupAddCard);
-    console.log("laa");
-
-    console.log(buttonCreate.disabled);
     formAddCard.reset();
-    buttonCreate.classList.add('popup__button_disabled');
+    buttonCreate.classList.add('popup__button-disabled');
     buttonCreate.disabled = true;
-    console.log(buttonCreate.disabled);
 }
 
 buttonEdit.addEventListener('click', function () {
