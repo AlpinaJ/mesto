@@ -42,6 +42,7 @@ const enableValidation = ({
                      errorClass: 'popup__error_visible'
                  });
 
+// Валидация форм
 const profileValidator = new FormValidator(enableValidation, popupEditProfile);
 const placeValidator = new FormValidator(enableValidation, popupAddCard);
 profileValidator.enableValidation();
