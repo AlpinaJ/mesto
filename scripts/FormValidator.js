@@ -59,7 +59,7 @@ export default class FormValidator {
         });
     }
 
-    _resetValidation() {
+    resetValidation() {
         this._toggleButtonError();
 
         this._inputs.forEach((input) => {

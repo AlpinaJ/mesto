@@ -113,7 +113,7 @@ buttonEdit.addEventListener('click', function () {
     // Делаем присваивание полей
     newName.value = name.textContent;
     newDescription.value = description.textContent;
-    profileValidator._resetValidation();
+    profileValidator.resetValidation();
 });
 
 // Закрытие попапов
@@ -126,7 +126,7 @@ formEditProfile.addEventListener('submit', submitProfileForm);
 
 buttonAdd.addEventListener('click', function () {
     openPopup(popupAddCard);
-    placeValidator._resetValidation();
+    placeValidator.resetValidation();
 });
 
 popupOverlays.forEach((element) => {
