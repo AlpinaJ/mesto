@@ -26,7 +26,6 @@ export default class Card {
 
     // Добавление обработчиков событий
     _setEventListeners() {
-        console.log(1, this._name, this._link);
         this._like = this._element.querySelector('.card__like');
         this._image = this._element.querySelector('.card__image');
 
@@ -39,7 +38,6 @@ export default class Card {
         });
 
         this._image.addEventListener('click',()=>{
-            console.log(2, this._name, this._link);
             this._handleImageClick(this._name, this._link);
         })
     }

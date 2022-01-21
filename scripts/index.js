@@ -98,8 +98,6 @@ function addPopupCard(event) {
     cardsContainer.prepend(createCard(newCard));
     closePopup(popupAddCard);
     formAddCard.reset();
-    buttonCreate.classList.add('popup__button-disabled');
-    buttonCreate.disabled = true;
 }
 
 // Функция увеличения картинки при клике на нее
@@ -115,6 +113,7 @@ buttonEdit.addEventListener('click', function () {
     // Делаем присваивание полей
     newName.value = name.textContent;
     newDescription.value = description.textContent;
+    profileValidator._resetValidation();
 });
 
 // Закрытие попапов
@@ -127,6 +126,7 @@ formEditProfile.addEventListener('submit', submitProfileForm);
 
 buttonAdd.addEventListener('click', function () {
     openPopup(popupAddCard);
+    placeValidator._resetValidation();
 });
 
 popupOverlays.forEach((element) => {

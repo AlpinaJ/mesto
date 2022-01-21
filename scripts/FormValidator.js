@@ -59,10 +59,16 @@ export default class FormValidator {
         });
     }
 
+    _resetValidation() {
+        this._toggleButtonError();
+
+        this._inputs.forEach((input) => {
+                this._hideError(input);
+            }
+        );
+    }
+
     enableValidation = () => {
-        this._form.addEventListener('submit', (event) => {
-            event.preventDefault();
-        });
         this._setInputListeners();
     }
 }
