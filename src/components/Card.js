@@ -1,9 +1,9 @@
 export default class Card {
-    constructor(data, cardSelector, handleImageClick) {
+    constructor(data, cardSelector, handleCardClick) {
         this._name = data.name;
         this._link = data.link;
         this._cardSelector = cardSelector;
-        this._handleImageClick = handleImageClick;
+        this._handleCardClick = handleCardClick;
     }
 
     // Нахожжение темплейта с данным селектором
@@ -28,7 +28,6 @@ export default class Card {
     _setEventListeners() {
         this._like = this._element.querySelector('.card__like');
         this._image = this._element.querySelector('.card__image');
-
         this._like.addEventListener('click', () => { // При клике ставим лайк
             this._handleLikeCard();
         });
@@ -37,9 +36,7 @@ export default class Card {
             this._handleDeleteCard();
         });
 
-        this._image.addEventListener('click',()=>{
-            this._handleImageClick(this._name, this._link);
-        })
+        this._image.addEventListener('click',this._handleCardClick);
     }
 
     getView() {
