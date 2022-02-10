@@ -1,12 +1,12 @@
-import './pages/index.css';
-import Card from "./components/Card.js";
-import FormValidator from "./components/FormValidator.js";
+import './index.css';
+import Card from "../components/Card.js";
+import FormValidator from "../components/FormValidator.js";
 // import Popup from "./components/Popup.js";
-import PopupWithForm from "./components/PopupWithForm.js";
-import PopupWithImage from "./components/PopupWithImage.js";
-import Section from "./components/Section.js";
-import UserInfo from "./components/UserInfo.js";
-import {initialCards} from "./utils/initialCards.js";
+import PopupWithForm from "../components/PopupWithForm.js";
+import PopupWithImage from "../components/PopupWithImage.js";
+import Section from "../components/Section.js";
+import UserInfo from "../components/UserInfo.js";
+import {initialCards} from "../utils/initialCards.js";
 import {
     enableValidation,
     popupEditProfile,
@@ -17,7 +17,7 @@ import {
     newDescription,
     newPlace,
     newLink
-} from "./utils/constants.js";
+} from "../utils/constants.js";
 
 // Валидация форм
 const profileValidator = new FormValidator(enableValidation, popupEditProfile);
@@ -34,8 +34,8 @@ const user = new UserInfo('.profile__title', '.profile__subtitle');
 
 // Редактирование профиля
 function submitProfileForm(input) {
-    const name = input[0].value;
-    const description = input[1].value;
+    const name = input.name;
+    const description = input.description;
     user.setUserInfo({name, description});
     profilePopup.close();
 }
@@ -62,8 +62,8 @@ cardsSection.renderItems();
 // Функция для добавлении карточки из попапа
 function addPopupCard(input) {
     const newCard = {
-        name: input[0].value,
-        link: input[1].value,
+        name: input.place,
+        link: input.link,
     };
     cardsSection.addItem(createCard(newCard));
     placePopup.close();

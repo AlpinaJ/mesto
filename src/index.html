@@ -41,11 +41,11 @@
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form popup__form_type_edit" name="edit">
             <div class="popup__input-container">
-                <input type="text" class="popup__input popup__input_type_name" id="profile-name" name="name" required minlength="2" maxlength="40" placeholder="Жак-Ив Кусто">
+                <input type="text" class="popup__input popup__input_type_name" id="profile-name" name="name" required minlength="2" maxlength="40" placeholder="Имя">
                 <span id="profile-name-error" class="popup__error"></span>
             </div>
             <div class="popup__input-container">
-                <input type="text" class="popup__input popup__input_type_description" id="profile-description" required minlength="2" maxlength="200" placeholder="description"
+                <input type="text" class="popup__input popup__input_type_description" id="profile-description" name="description" required minlength="2" maxlength="200" placeholder="О себе"
                        value="Исследователь океана">
                 <span id="profile-description-error" class="popup__error"></span>
             </div>
@@ -65,8 +65,8 @@
                 <span id="card-name-error" class="popup__error"></span>
             </div>
             <div class="popup__input-container">
-                <input type="url" class="popup__input popup__input_type_link" id="card-url" required name="link"
-                       placeholder="Ссылка на картинку">
+                <input type="url" class="popup__input popup__input_type_link" id="card-url" name="link"
+                       placeholder="Ссылка на картинку" required>
                 <span id="card-url-error" class="popup__error"></span>
             </div>
             <button type="submit" class="popup__button popup__button-create"> Создать</button>

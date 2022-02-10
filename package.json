@@ -2,7 +2,7 @@
   "name": "mesto",
   "version": "0.0.1",
   "description": "Проект представляет из себя интерактивную страницу с возможностью добавлять фотографии и лайкать их.",
-  "main": "index.js",
+  "main": "pages/index.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development"
