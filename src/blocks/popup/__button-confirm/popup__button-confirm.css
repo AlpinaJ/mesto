@@ -1,0 +1,20 @@
+.popup__button-confirm {
+    width: 358px;
+    margin: -28px 0 0;
+    background-color: black;
+    height: 50px;
+    font-family: Inter, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.popup__button-confirm:hover {
+    opacity: 0.8;
+    transition: 1s;
+}

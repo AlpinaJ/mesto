@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Место</title>
-<!--    <link rel="stylesheet" href="pages/index.css">-->
+    <!--    <link rel="stylesheet" href="pages/index.css">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="page">
@@ -15,7 +15,10 @@
 <main>
     <section class="profile">
         <div class="profile__info">
-            <img class="profile__avatar" src="<%=require('./images/avatar.png')%>" alt="Фото пользователя">
+            <div class="profile__avatar">
+                <img src="<%=require('./images/avatar.png')%>" class="profile__avatar-image" alt="Фото пользователя">
+            </div>
+
             <div class="profile__description">
                 <div class="profile__text">
                     <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -41,11 +44,13 @@
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form popup__form_type_edit" name="edit">
             <div class="popup__input-container">
-                <input type="text" class="popup__input popup__input_type_name" id="profile-name" name="name" required minlength="2" maxlength="40" placeholder="Имя">
+                <input type="text" class="popup__input popup__input_type_name" id="profile-name" name="name" required
+                       minlength="2" maxlength="40" placeholder="Имя">
                 <span id="profile-name-error" class="popup__error"></span>
             </div>
             <div class="popup__input-container">
-                <input type="text" class="popup__input popup__input_type_description" id="profile-description" name="description" required minlength="2" maxlength="200" placeholder="О себе"
+                <input type="text" class="popup__input popup__input_type_description" id="profile-description"
+                       name="description" required minlength="2" maxlength="200" placeholder="О себе"
                        value="Исследователь океана">
                 <span id="profile-description-error" class="popup__error"></span>
             </div>
@@ -61,7 +66,8 @@
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form popup__form_type_add" name="add">
             <div class="popup__input-container">
-                <input type="text" class="popup__input popup__input_type_place" id="card-name" name="place" required minlength="2" maxlength="30" placeholder="Название">
+                <input type="text" class="popup__input popup__input_type_place" id="card-name" name="place" required
+                       minlength="2" maxlength="30" placeholder="Название">
                 <span id="card-name-error" class="popup__error"></span>
             </div>
             <div class="popup__input-container">
@@ -81,13 +87,39 @@
         <p class="popup__text">lalal</p>
     </div>
 </div>
+<div class="popup popup_type_delete">
+    <div class="popup__overlay"></div>
+    <div class="popup__container">
+        <button class="popup__button-close" type="button"></button>
+        <h3 class="popup__title">Вы уверенны?</h3>
+        <button type="button" class="popup__button popup__button-confirm">Да</button>
+    </div>
+</div>
+<div class="popup popup_type_avatar">
+    <div class="popup__overlay"></div>
+    <div class="popup__container">
+        <button class="popup__button-close" type="button"></button>
+        <form class="popup__form popup__form_type_avatar" name="add">
+            <div class="popup__input-container">
+                <h3 class="popup__title">Обновить аватар</h3>
+                <input type="url" class="popup__input popup__input_type_link" id="avatar-url" name="link"
+                       placeholder="Ссылка на картинку" required>
+                <span id="avatar-url-error" class="popup__error"></span>
+            </div>
+            <button type="submit" class="popup__button popup__button-change"> Сохранить</button>
+        </form>
+    </div>
+</div>
 <template class="template">
     <div class="card">
         <button class="card__thrash" type="button"></button>
         <img src="#" class="card__image" alt="">
         <div class="card__info">
             <h3 class="card__title"></h3>
-            <button class="card__like" type="button"></button>
+            <div class="card__likes">
+                <button class="card__like" type="button"></button>
+                <p class="card__likes-number">0</p>
+            </div>
         </div>
     </div>
 </template>

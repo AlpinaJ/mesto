@@ -1,7 +1,7 @@
 .card__like{
     width: 22px;
     height: 19px;
-    margin: 5px 0 0 5px;
+    margin: 5px 0 0;
     background-image: url("../../../images/like.svg");
     cursor: pointer;
     background-position: center;
