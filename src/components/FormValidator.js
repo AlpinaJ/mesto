@@ -59,6 +59,8 @@ export default class FormValidator {
     }
 
     resetValidation() {
+        console.log('reset');
+        console.log(this._submitButton.classList, this._submitButton.disabled);
         this._toggleButtonError();
 
         this._inputs.forEach((input) => {

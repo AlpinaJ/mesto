@@ -67,12 +67,10 @@ function createCard(data) {
     const handleCardLike = () => {
         if (card.isLike()) {
             api.deleteLike(card._id).then((res) => {
-                console.log('answer delete', res);
                 card.likeCard(res.likes.length);
             }).catch((err) => console.log(err));
         } else {
             api.putLike(card._id).then((res) => {
-                console.log('answer put', res);
                 card.likeCard(res.likes.length);
             }).catch((err) => console.log(err));
         }
