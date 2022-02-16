@@ -9,9 +9,9 @@ export{
     newDescription,
     newPlace,
     newLink,
-    popupButtonSave,
-    popupButtonCreate,
-    popupButtonChange,
+    profileButtonSave,
+    cardButtonCreate,
+    avatarButtonChange,
     enableValidation
 }
 // Попапы
@@ -35,9 +35,9 @@ const newPlace = formAddCard.querySelector('.popup__input_type_place');
 const newLink = formAddCard.querySelector('.popup__input_type_link');
 
 
-const popupButtonSave = document.querySelector('.popup__button-save');
-const popupButtonCreate = document.querySelector('.popup__button-create');
-const popupButtonChange = document.querySelector('.popup__button-change');
+const profileButtonSave = document.querySelector('.popup__button-save');
+const cardButtonCreate = document.querySelector('.popup__button-create');
+const avatarButtonChange = document.querySelector('.popup__button-change');
 
 const enableValidation = ({
     formSelector: '.popup__form',

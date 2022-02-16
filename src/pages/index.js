@@ -19,9 +19,9 @@ import {
     newName,
     newDescription,
     newPlace,
-    popupButtonSave,
-    popupButtonCreate,
-    popupButtonChange,
+    profileButtonSave,
+    cardButtonCreate,
+    avatarButtonChange,
     newLink
 } from "../utils/constants.js";
 import Popup from "../components/Popup";
@@ -66,12 +66,14 @@ function createCard(data) {
 
     const handleCardLike = () => {
         if (card.isLike()) {
-            api.deleteLike(card._id).then(() => {
-                card.likeCard();
+            api.deleteLike(card._id).then((res) => {
+                console.log('answer delete', res);
+                card.likeCard(res.likes.length);
             }).catch((err) => console.log(err));
         } else {
-            api.putLike(card._id).then(() => {
-                card.likeCard();
+            api.putLike(card._id).then((res) => {
+                console.log('answer put', res);
+                card.likeCard(res.likes.length);
             }).catch((err) => console.log(err));
         }
     }
@@ -109,19 +111,19 @@ Promise.all([userInfoPromise, initialCardsPromise]).then(([resUser, resCards]) =
 
 // Редактирование профиля
 function submitProfileForm(input) {
-    popupButtonSave.textContent = 'Сохранение';
+    profileButtonSave.textContent = 'Сохранение';
     api.patchUserInfo(input).then((res) => {
         user.setUserInfo({name: res.name, description: res.about, avatar: res.avatar, id: res._id});
         profilePopup.close();
     }).catch((err) => console.log(err))
-        .finally(()=>{
-            popupButtonSave.textContent = 'Сохранить';
+        .finally(() => {
+            profileButtonSave.textContent = 'Сохранить';
         });
 }
 
 // Функция для добавлении карточки из попапа
 function addPopupCard(input) {
-    popupButtonCreate.textContent = 'Сохранение';
+    cardButtonCreate.textContent = 'Сохранение';
     const newCard = {
         name: input.place,
         link: input.link,
@@ -130,17 +132,17 @@ function addPopupCard(input) {
         cardsSection.addItem(createCard(res));
         placePopup.close();
     }).catch((err) => console.log(err))
-        .finally(()=>{
-            popupButtonCreate.textContent = 'Создать';
+        .finally(() => {
+            cardButtonCreate.textContent = 'Создать';
         });
 
-    newLink.value = '';
-    newPlace.value = '';
+    // newLink.value = '';
+    // newPlace.value = '';
 }
 
 // Изменения картинки аватара
 function submitAvatarForm(input) {
-    popupButtonChange.textContent = 'Сохранение';
+    avatarButtonChange.textContent = 'Сохранение';
     api.changeAvatar(input.link)
         .then((res) => {
             user.setUserInfo({
@@ -153,8 +155,8 @@ function submitAvatarForm(input) {
         })
         .catch((err) => {
             console.log(err);
-        }).finally(()=>{
-        popupButtonChange.textContent = 'Сохранить';
+        }).finally(() => {
+        avatarButtonChange.textContent = 'Сохранить';
     });
 
 }
