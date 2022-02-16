@@ -40,6 +40,7 @@
 .popup__error{color:red;display:none;font-family:Inter,sans-serif,Arial;font-size:12px;font-style:normal;font-weight:400;line-height:15px;margin:0}
 .popup__input-container{margin:0 0 30px}
 .popup__error_visible{display:block}
+.popup__button-change{background-color:#000;border-radius:2px;color:#fff;cursor:pointer;font-family:Inter,Arial,sans-serif;font-size:18px;font-style:normal;font-weight:400;height:50px;line-height:22px;margin:13px 0 0;text-align:center}.popup__button-change:hover{opacity:.8;transition:1s}@media (max-width:700px){.popup__button-change{font-size:14px;height:46px;line-height:17px;margin:18px 0 0}}
 .popup__button-disabled{background-color:#fff;border:1px solid rgba(0,0,0,.2);color:rgba(0,0,0,.2)}
 .popup__overlay{cursor:pointer;height:100%;left:0;position:absolute;top:0;width:100%}
 .card__likes{align-items:center;display:flex;flex-direction:column}
@@ -47,5 +48,4 @@
 .popup__button-confirm{background-color:#000;border-radius:2px;color:#fff;cursor:pointer;font-family:Inter,Arial,sans-serif;font-size:18px;font-style:normal;font-weight:400;height:50px;line-height:22px;margin:-28px 0 0;text-align:center;width:358px}.popup__button-confirm:hover{opacity:.8;transition:1s}
 .card__thrash_active{visibility:visible}
 .profile__avatar-image{border-radius:50%;display:block;height:100%;-o-object-fit:cover;object-fit:cover;transition:opacity .5s linear;width:100%}.profile__avatar-image:hover{opacity:.2}
-.popup__button-change{background-color:#000;border-radius:2px;color:#fff;cursor:pointer;font-family:Inter,Arial,sans-serif;font-size:18px;font-style:normal;font-weight:400;height:50px;line-height:22px;margin:20px 0 0;text-align:center}.popup__button-change:hover{opacity:.8;transition:1s}@media (max-width:700px){.popup__button-change{font-size:14px;height:46px;line-height:17px;margin:18px 0 0}}
 
